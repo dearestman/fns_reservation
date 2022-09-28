@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">  
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Федеральная Налоговая служба</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/functions.css">
+	
+	<script type="text/javascript" src="js/jquery.1.10.js"></script> 
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/jquery-ui.custom.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/functions_init.js"></script>
+
+
+<!-- Gallery -->
+	<script type="text/javascript" src="js/jquery.gallerie.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/gallerie.css">
+	<link rel="stylesheet" type="text/css" href="css/gallerie-effects.css">
+
+<!-- Responsive tables -->
+	<link rel="stylesheet" href="css/responsive-tables.css">
+	<script src="js/responsive-tables.js"></script> 
+
+<!-- Custom checkbox & radio -->	
+	<link rel="stylesheet" href="css/controls.css">
+	<script src="js/jquery.icheck.js"></script>
+
+<!-- Custom scroll -->
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
+	<script src="js/jquery.mousewheel.js"></script> 
+	<script src="js/jquery.jscrollpane.min.js"></script>
+
+<!-- Listbox -->
+	<link rel="stylesheet" href="css/ui.dynatree.css">
+	<script src="js/jquery.dynatree.min.js"></script>
+	<script src="js/tree.init.js"></script>
+
+<!-- Players -->
+	<link rel="stylesheet" href="css/mediaelementplayer.css">
+	<script src="js/mediaelement-and-player.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.scroll-pane').jScrollPane();
+			$('.scroll-pane1').jScrollPane({showArrows: true});
+
+			$('#gallery').gallerie({
+			    elem: 'a.img_link',
+			});
+
+			$('input').iCheck({
+			    checkboxClass: 'icheckbox_minimal-blue',
+			    radioClass: 'iradio_minimal-blue',
+			    increaseArea: '20%' // не обязательно
+			  });
+
+		});
+
+		$(window).resize(function() {
+			$('.scroll-pane').jScrollPane();
+			$('.scroll-pane1').jScrollPane({showArrows: true});
+		});
+
+		$(document).on("click", "span.dynatree-expander", function(e) {
+			$(this).closest(".scroll-pane").jScrollPane();
+			var pane = $('.scroll-pane');
+		    var api = pane.data('jsp');
+		    api.reinitialise();
+		});
+
+	</script>
+
+</head>
+<body>
+	<form method="post" action="" id="MainForm" enctype="multipart/form-data">
+
+  	<div id="wrapper">
+  	
+		<div id="header">
+			<div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			
+			<div class="header_left">
+				<span class="site_title"><a href="#">Федеральная<br>Налоговая служба</a></span>
+
+			</div>
+
+			<div class="header_font">
+				<span id="decrease"><a>A-</a></span>
+				<span id="reset" class="limit_size"><a>A</a></span>
+				<span id="increase"><a>A+</a></span>
+			</div>
+
+
+
+			<div class="clear"></div>
+		</div>
+
+		<div id="main">
+			<div class="nav">
+               	<h2>Узнай свою задолженность</h2>
+			    <div class="clear"></div>
+			</div>
+
+
+
+
+			<div class="content">
+
+<div class="mid_col_left">
+                <div class="text_block_top">
+   <h3>Реквизиты налогоплательщика</h3>
+   
+			   		<table class="form_table">
+					    <tr>
+							<th>Регион:</th><td><select class="select_type2 select_size100p">
+											<option selected="selected">Краснодарский край</option>
+											<option>Краснодарский край</option>
+											<option>Краснодарский край</option>
+										</select></td>
+						</tr>						
+						<tr>
+							<th>ИНН:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Фамилия:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Имя:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Отчество:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+					</table>
+
+			       
+			   </div>
+			   
+		   
+	
+	   
+  <div class="text_block no_border">
+   <h3>Защита от спама</h3>
+			   		<table class="form_table">					  					
+						<tr>
+							<th>Цифры с картинки:</th><td><input type="text" class="inputbox input_size60p"></td>
+						</tr>						
+					</table>
+					
+					 <span class="fleft ptop20"><button class="blue_button">Очистить</button></span>
+					 <span class="fright ptop20"><button class="blue_button">Найти</button></span>
+			        <div class="clear"></div>
+  
+  </div>
+
+</div>
+
+<div class="right_col">
+  <div class="content_form">
+  <h3>Информация</h3>
+  
+            <p>Для уточнения информации о Вашей задолженности обращайтесь в инспекцию по месту Вашего учета в качестве налогоплательщика.</p>
+            <p>Для получения информации по вопросам постановки на учет физического лица и получения документа,
+                подтверждающего постановку на учет с присвоением ИНН, обращаться по адресу:<br>             
+            </p>
+           
+      
+  </div>
+</div>
+
+
+	
+
+	
+
+
+
+		</div>
+
+
+
+
+		<script type="text/javascript">
+						$("#mini-spoiler2").MiniSpoiler('maximizator', 'minimizator');
+						$("#mini-spoiler3").MiniSpoiler('maximizator', 'minimizator');
+		</script>
+		
+
+
+        
+	</div>
+</div>
+
+	<div id="footer">
+		<div class="footer_frame">
+			<div class="footer_holder">
+
+
+
+				<div class="footer_right">
+				   
+					<div class="copy_div">
+						<div class="copy">&copy; 2005-2013 ФНС России</div>
+						<p>Дата создания страницы  08.07.2013 <br>Дата обновления страницы 08.07. 2013</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+    </form>
+
+
+<script type="text/javascript"> $(".sp").Spoiler({}); </script>
+<script type="text/javascript">
+	  $("#div-new-tab1").NewTabs();
+	  $("#div-new-tab2").NewTabs();
+	  $(document).ready(function(){
+	  $(".content_form > a.bigger").AdvPanel();
+	  });
+	  
+</script>
+
+</body>
+</html> 

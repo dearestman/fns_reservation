@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">  
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Федеральная Налоговая служба</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/functions.css">
+	
+	<script type="text/javascript" src="js/jquery.1.10.js"></script> 
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/jquery-ui.custom.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/functions_init.js"></script>
+
+
+<!-- Gallery -->
+	<script type="text/javascript" src="js/jquery.gallerie.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/gallerie.css">
+	<link rel="stylesheet" type="text/css" href="css/gallerie-effects.css">
+
+<!-- Responsive tables -->
+	<link rel="stylesheet" href="css/responsive-tables.css">
+	<script src="js/responsive-tables.js"></script> 
+
+<!-- Custom checkbox & radio -->	
+	<link rel="stylesheet" href="css/controls.css">
+	<script src="js/jquery.icheck.js"></script>
+
+<!-- Custom scroll -->
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
+	<script src="js/jquery.mousewheel.js"></script> 
+	<script src="js/jquery.jscrollpane.min.js"></script>
+
+<!-- Listbox -->
+	<link rel="stylesheet" href="css/ui.dynatree.css">
+	<script src="js/jquery.dynatree.min.js"></script>
+	<script src="js/tree.init.js"></script>
+
+<!-- Players -->
+	<link rel="stylesheet" href="css/mediaelementplayer.css">
+	<script src="js/mediaelement-and-player.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.scroll-pane').jScrollPane();
+			$('.scroll-pane1').jScrollPane({showArrows: true});
+
+			$('#gallery').gallerie({
+			    elem: 'a.img_link',
+			});
+
+			$('input').iCheck({
+			    checkboxClass: 'icheckbox_minimal-blue',
+			    radioClass: 'iradio_minimal-blue',
+			    increaseArea: '20%' // не обязательно
+			  });
+
+		});
+
+		$(window).resize(function() {
+			$('.scroll-pane').jScrollPane();
+			$('.scroll-pane1').jScrollPane({showArrows: true});
+		});
+
+		$(document).on("click", "span.dynatree-expander", function(e) {
+			$(this).closest(".scroll-pane").jScrollPane();
+			var pane = $('.scroll-pane');
+		    var api = pane.data('jsp');
+		    api.reinitialise();
+		}); 
+
+	</script>
+	
+</head>
+<body>
+	<form method="post" action="" id="MainForm" enctype="multipart/form-data"> 
+
+  	<div id="wrapper">
+  	
+		<div id="header">
+			<div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			
+			<div class="header_left">
+				<span class="site_title"><a href="#">Федеральная<br>Налоговая служба</a></span>
+
+			</div>
+			
+			<div class="header_font"> 
+				<span id="decrease"><a>A-</a></span>
+				<span id="reset" class="limit_size"><a>A</a></span>
+				<span id="increase"><a>A+</a></span>
+			</div>
+
+
+			
+			<div class="clear"></div>
+		</div>
+		
+		<div id="main">
+			<div class="nav">
+               	<h2>Личный кабинет налогоплательщика</h2>
+			    <div class="clear"></div>
+			</div>
+
+			<div class="bread_crumbs"><a href="">Главная страница</a> / <a href="">Юридические лица</a> / </div>
+
+
+			<div class="content">
+
+			<div class="mid_col_big">
+			   <div class="content_list"><div>
+					<span>Содержание страницы</span>
+					<ul>
+						<li><a href="">Содержание страницы ссылка</a></li>
+						<li><a href="">Содержание страницы ссылка</a></li>
+						<li><a href="">Содержание страницы ссылка</a></li>
+						<li><a href="">Содержание страницы ссылка</a></li>
+					</ul>
+			   </div></div>
+			
+			   <div class="text_block">
+					<h2>(H2) Порядок и сроки проведения</h2>
+               		<h3>(H3) Порядок и сроки проведения</h3>
+
+
+					<p class="to_top">&uarr;<a href="#">К началу страницы</a></p>
+					<div class="with_icon icon_arr"><p><a href="">Проверка проводится <strong>на территории налогоплательщика</strong></a>.</p>
+									<p>В случае, если у налогоплательщика отсутствует возможность предоставить помещение для проведения выездной налоговой проверки</p>
+
+														<div class="sp">
+															<p>За налоговый период предприниматель получил  доходы в размере 25 000 000 руб, а его расходы составили 24 000 000 руб.</p>
+															<table class="vtop">
+															<tr><td><strong>1.</strong></td> 
+																<td><p><strong>Определяем налоговую базу</strong></p> <p>25 000 000 руб. - 24 000 000 руб. = 1 000 000 руб.</p></td></tr> 
+															<tr><td><strong>2.</strong></td> 
+																<td><p><strong>Определяем сумму налога</strong></p> <p>1 000 000 руб. * 15% = 150 000 руб.</p></td> </tr>
+															<tr><td><strong>3.</strong></td> 
+																<td><p><strong>Рассчитываем минимальный налог</strong></p> <p>25 000 000 руб. * 1% = 250 000 руб.</p></td></tr>
+															</table>
+															<p>Уплатить нужно именно эту сумму, а не сумму налога, исчисленную в общем порядке.</p>
+
+
+															<br>
+															
+
+														</div>
+									<div class="clear"></div>
+					</div>
+				</div>
+
+                <div class="note">Сменить объект налогообложения возможно только со следующего года, письменно уведомив об этом налоговый орган до 31 декабря.</div>
+
+				<br><br><br>
+
+
+				<div id="gallery" class="scroll-pane1 scroll_gallery">
+						<a class="img_link" href="images/picture1.jpg"><img src="images/small/picture1.jpg" alt="image01" /></a>
+						<a class="img_link" href="images/picture2.jpg"><img src="images/small/picture2.jpg" alt="image02" /></a>
+						<a class="img_link" href="images/picture3.jpg"><img src="images/small/picture3.jpg" alt="image03" /></a>
+						<a class="img_link" href="images/picture4.jpg"><img src="images/small/picture4.jpg" alt="image04" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture5.jpg" alt="image05" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture6.jpg" alt="image05" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture7.jpg" alt="image05" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture8.jpg" alt="image05" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture9.jpg" alt="image05" /></a>
+						<a class="img_link" href="images/picture5.jpg"><img src="images/small/picture10.jpg" alt="image05" /></a>
+				</div>
+
+			<br><br>
+
+            <a href="" class="blue_button">Кнопка как ссылка</a>
+            <button class="blue_button">Кнопка как button</button>
+
+				<div class="ptop20">
+								<a id="drop-target-1" class="down_btn2 drop_link"><span>Другие электронные услуги</span></a>
+								<div id="drop-content-1" style="width:300px;" class="down_button_div">
+									<a>Другие электронные услуги</a>
+									<a>Другие электронные услуги</a>
+								</div>	
+				</div>
+				
+				<br>
+				
+				<div class="ptop20">
+								<a id="drop-target-2" class="down_btn2 drop_control"><span>Другие электронные услуги</span></a>
+								<div id="drop-content-2" style="width:300px;" class="down_button_div">
+									<a class="nowrap"><input type="radio" name="service" id="radio1"> <label class="check_label" for="radio1">Другие электронные услуги</label></a>
+									<a class="nowrap"><input type="radio" name="service" id="radio2"> <label class="check_label" for="radio2">Другие электронные услуги</label></a>
+								</div>	
+				</div>
+				
+				<br>
+				
+				<div class="ptop20">
+								<a id="drop-target-3" class="down_btn2 drop_control"><span>Другие электронные услуги</span></a>
+								<div id="drop-content-3" style="width:300px;" class="down_button_div">
+									<a class="nowrap"><input type="checkbox" id="check1"> <label class="check_label" for="check1">Другие электронные услуги</label></a>
+									<a class="nowrap"><input type="checkbox" id="check2"> <label class="check_label" for="check2">Другие электронные услуги</label></a>
+								</div>	
+				</div>
+				
+				<br>
+
+				<p>Подать декларацию в налоговую инспекцию можно несколькими способами:</p>
+						<span class="blue_down_button"><button>Лично</button><a id="drop-target-4" class="bb_arrow">
+								</a></span>
+						<div id="drop-content-4" style="width:150px;" class="down_button_div">
+							<a>Лично</a>
+							<a>Лично</a>
+						</div>	
+
+				<br><br><br>
+				
+
+				<span class="file_doc gray">DOC</span><br>
+				<span class="file_xls caps gray">xls</span><br>
+				<span class="file_pdf caps gray">pdf</span><br>
+				<span class="file_zip caps gray">zip</span><br>
+				<span class="file_type caps gray">file</span>
+
+				<br><br><br>
+
+
+                <div class="with_icon icon_calc"><div><p>Пример расчета размера авансового платежа для объекта “доходы”</p></div>
+                 </div>
+                 <strong class="large blue pright10">6%</strong> <br>
+
+                 <div class="div_left">
+						<div class="time_title">Отчетный период</div>
+						<div class="time1">Квартал</div>
+						<div class="time2">Год</div>
+						<div class="time3">Полугодие</div>
+					</div>
+                    <div class="div_right">
+						<div class="time_title">Налоговый период</div>
+						<div class="time1">Квартал</div>
+						<div class="time2">Год</div>
+						<div class="time3">Полугодие</div>
+					</div>
+                    <div class="clear"></div>
+                <br><br><br>
+
+                 <div class="with_icon">
+						<span class="number">1</span>
+						<p class="bigger2"><strong>Платим налог авансом</strong></p>
+						<p>Не позднее 25 календарных дней со дня окончания отчетного периода (квартала, полугодия и 9 месяцев)</p>
+						<div class="sp"></div>
+                        <div class="clear"></div>
+					</div>
+
+
+                 <div class="div_more">
+							<a href="" class="blue_button dl_button">Перейти</a>
+							Узнать реквизиты, а также сформировать платежное поручение можно с помощью сервиса:
+						</div>
+
+                  <div class="download">
+                    <div class="dl_item">
+                    <div><a href="/files/fdgr/1.0.10/readme.doc">Аннотация к программе</a><br>
+                    <span class="gray caps file_doc">(doc)</span></div>
+                    <div><a href="/files/fdgr/1.0.10/readme.doc" class="blue_button">Загрузить</a></div>
+                    </div>
+                    <div class="dl_item">
+                    <div><a href="/files/fdgr/1.0.10/Setup_FDGR.msi">Файл установки</a><br>
+                    <span class="gray caps file_type">(msi)</span></div>
+                    <div><a href="/files/fdgr/1.0.10/Setup_FDGR.msi" class="blue_button">Загрузить</a></div>
+                    </div>
+                  </div>
+
+                  <div class="list_item_wide">
+							<div class="item_image align_center">
+								<strong class="large2 blue">2</strong><br><strong class="big blue">мес.</strong>
+							</div>
+							  со дня истечения срока исполнения требования об уплате налога (сбора), направленного налогоплательщику (плательщику сбора, налоговому агенту) на основании решения о привлечении к ответственности за совершение налогового правонарушения, налогоплательщик (плательщик сбора, налоговый агент) не уплатил (не перечислил) в полном объеме указанные в данном требовании суммы недоимки
+						</div>
+                   <div class="clear"></div>
+
+
+                   <div class="div_left">
+						<div class="with_icon icon_arr2"><p><a href="">Противодействие коррупции</a></p></div>
+					</div>
+                    <div class="div_right">
+						<div class="with_icon icon_arr2"><p><a href="">Сведения о доходах госслужащих и членов их семей</a></p></div>
+
+					</div>
+                     <div class="clear"></div>
+
+				<table class="responsive taxes_table">
+			   			<tr>
+					   		<th class="tax_way"></th>
+							<th>Налог</th>
+							<th>Объект налогообложения</th>
+							<th>Ставка</th>
+							<th>Периодичность уплаты налога</th>
+						</tr>
+			   			<tr>
+					   		<td class="tax_way no_border">ОСН</td>
+					   	
+							<td><a href="">НДФЛ</a></td>
+							<td>Полученный доход</td>
+							<td>13/35%<br> (см.&nbsp;<a class="new_tab" href="">ст.&nbsp;224 НК&nbsp;РФ</a>)</td>
+							<td>Авансовые платежи за первое полугодие, 3-ий и 4-ый кварталы; плюс налог по итогам года</td>
+						</tr>
+			   			<tr>
+					   		<td class="tax_way"></td>
+					   
+					   		<td>НДC</td>
+					   		<td>Операции, перечисленные в (<a class="new_tab" href="">ст.&nbsp;146 НК&nbsp;РФ</a>)</td>
+					   		<td>0/10/18%<br> (см.&nbsp;<a class="new_tab" href="">ст.&nbsp;164 НК&nbsp;РФ</a>) </td>
+					   		<td>1 раз в квартал</td>
+						</tr>
+			   			
+			   		</table>
+			   		
+			   		
+			   		<br><br>
+
+			   		<table class="border_table ">
+			   			<tr>
+							<th>Налог</th>
+							<th>Объект налогообложения</th>
+							<th>Ставка</th>
+						</tr>
+			   			<tr>
+					   	
+							<td><a href="">НДФЛ</a></td>
+							<td>Полученный доход</td>
+							<td>13/35%<br> (см.&nbsp;<a class="new_tab" href="">ст.&nbsp;224 НК&nbsp;РФ</a>)</td>
+						</tr>
+			   			<tr>
+					   
+					   		<td>НДC</td>
+					   		<td>Операции, перечисленные в (<a class="new_tab" href="">ст.&nbsp;146 НК&nbsp;РФ</a>)</td>
+					   		<td>0/10/18%<br> (см.&nbsp;<a class="new_tab" href="">ст.&nbsp;164 НК&nbsp;РФ</a>) </td>
+						</tr>
+			   			
+			   		</table>
+			   		
+			   		
+			   		<br><br>
+			   		
+			   		
+			   		
+			   	<div class="content_form">
+			   		<div class="form_title">Поиск по разделу</div>
+			   		<input type="text" class="inputbox inputbox_search" placeholder="Введите наименование, номер или дату документа">
+			   		<div class="clear"></div>
+			        <a class="show_more2 fleft bigger" href="#">Расширенный поиск</a>
+			        
+			        <div class="adv_search">
+			        	<span class="form_span1">
+			        		<p>Категория</p>
+							
+							<select class="select_type2 select_size85p">
+								<option selected="selected">Любая</option>
+								<option>Не любая</option>
+							</select>
+							
+						</span>
+						<span class="form_span5">
+							<p><br></p>
+			        		<p><input type="checkbox" checked="checked" id="check3"> <label for="check3" class="check_label">Искать федеральную информацию</label></p>
+			        		<p><input type="checkbox" id="check4"> <label for="check4" class="check_label">Искать региональную информацию по:</label></p>
+			        		<div class="search_in">
+			        			<div class="radio">
+									<div><input type="radio" id="radio3" name="test"> <label for="radio3">Моему региону</label></div> 
+									<div><input type="radio" id="radio4" name="test" checked="checked"/> <label for="radio4">Всем регионам</label></div>
+									<div><input type="radio" id="radio5" name="test"> 							
+								
+									<label for="radio5">по <select class="select_type2 select_size60p">
+											<option selected="selected">г. Москва</option>
+											<option>Краснодарский край</option>
+											<option>Краснодарский край</option>
+											<option>Краснодарский край</option>
+										</select>
+									</label>
+									</div>
+								</div>
+							</div>		
+						</span>
+						
+						<div class="clear"></div>
+					</div>
+			        
+			        <span class="fright"><button class="blue_button">Найти</button></span>
+			        <div class="clear"></div>
+			   </div>    
+			   
+			   
+			   
+			   <br><br><br>
+			   
+			   
+			   <div class="tabs_block ptop20" id="div-new-tab1">
+					<div class="tabs small2">
+								<span style="width:45%" class="active"><a href="">Ставка налога</a></span>
+								<span style="width:55%"><a href="">Налоговая база</a></span>
+								<div class="clear"></div>
+					</div>
+							
+					<div class="tab-content-panel">
+						<div class="tabs_content">
+							<p>Согласно <a class="new_tab" href="">ст.346.18 НК РФ</a>, налоговой базой признается:</p>
+					
+							<div class="div_left"><strong>Для объекта “Доходы”</strong><br>
+								денежное выражение доходов
+							</div>
+							<div class="div_right"><strong>Для объекта “доходы минус расходы”</strong><br>
+								денежное выражение доходов, уменьшенных на величину расходов.
+							</div>
+							<div class="clear"></div>
+							<p>Доходы и расходы определяются нарастающим итогом с начала налогового периода. Для предпринимателей, выбравших объект “доходы минус расходы”, действует
+							правило минимального налога: если по итогам года сумма исчисленного налога оказалась меньше 1% полученных за год доходов, уплачивается минимальный налог в размере 1% от фактически полученных доходов.</p>
+									
+						</div>
+					</div>
+
+					<div class="tab-content-panel">
+						<div class="tabs_content"> <p>мы не успели заполнить этот таб, но мы скоро исправимся</p></div>
+					</div>
+							
+				</div>
+			   
+			   
+			   
+			   <br><br>
+			   
+			   <hr>
+			   
+			   <br><br>
+			   
+			   
+			   
+			   
+			   <div class="text_block">
+					<h2>Индивидуальные предприниматели платят налоги</h2>
+					<p class="to_top">&uarr;<a href="#">К началу страницы</a></p>
+					
+					<div class="div_left">
+						<p class="bigger">В связи с предпринимательской деятельностью (на <span id="ip-target-1" class="int_link">общем налоговом режиме</span>),
+						 индивидуальный предприниматель должен платить:</p>
+						 
+						 <div id="ip-content-1" class="tooltip_content">Индивидуальные предприниматели платят налоги Индивидуальные предприниматели платят налоги</div>
+						 
+					</div>
+					<div class="div_right">
+						<p class="bigger">Для облегчения взаимодействия с налоговой службой малого предпринимательства в <span id="ip-target-2" class="int_link">Москве</span> введены 
+						следующие <span id="ip-target-3" class="int_link">специальные налоговые режимы</span>:</p>
+						
+						 <div id="ip-content-2" class="tooltip_content">Москва Москва Москва </div>
+						 <div id="ip-content-3" class="tooltip_content">специальные налоговые режимы специальные налоговые режимы специальные налоговые режимы</div>
+						 
+					</div>
+					
+					<div class="clear"></div>
+					
+				</div>
+				
+				
+			   
+			   <div class="text_block">
+						<h2>Подписка по темам</h2>
+						<p class="bigger">Ниже перечисленны темы, по которым Вы можете получать новости. Для этого отметьте интересующие Вас темы, поставив рядом с ее названием флажок.</p>
+						
+						
+						
+						<div class="tabs_block ptop20" id="div-new-tab2">
+							<div class="tabs small2">
+								<span style="width:26%" class="active"><a href="">По ситуациям</a></span>
+								<span style="width:28%"><a href="">По категориям</a></span>
+								<span style="width:46%"><a href="">По профильной тематике</a></span>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="tab-content-panel">
+								<div class="tabs_content scroll-pane smaller" style="height:350px;">
+									<div class="content_scroll">
+										
+										<div id="tree">
+											<ul>
+											 <li id="key1" data="icon: false, expand: true">Все новости
+											  <ul>
+												  <li id="key1.1" title="Look, a tool tip!" data="icon: false">Физические лица
+												   <ul>
+													<li id="key1.1.1" data="icon: false">Регистрация юридического лица</li>
+													<li id="key1.1.2" data="icon: false">Проверка контрагентов</li>
+													<li id="key1.1.3" data="icon: false">Налоговая и бухгалтерская отчетность</li>
+													<li id="key1.1.4" data="icon: false">Учет банковских счетов</li>
+												   </ul>
+												  </li>
+												  <li id="key1.2" class="selected" data="icon: false">Индивидуальные предприниматели
+												   <ul>
+													<li id="key1.2.1" data="icon: false">Регистрация юридического лица</li>
+													<li id="key1.2.2" data="icon: false">Проверка контрагентов</li>
+													<li id="key1.2.3" data="icon: false">Налоговая и бухгалтерская отчетность</li>
+													<li id="key1.2.4" data="icon: false">Учет банковских счетов</li>
+												   </ul>
+												  </li>
+												  <li id="key1.3" data="icon: false, expand: true">Юридические лица
+													  <ul>
+													<li id="key1.3.1" data="icon: false">Регистрация юридического лица</li>
+													<li id="key1.3.2" data="icon: false">Проверка контрагентов</li>
+													<li id="key1.3.3" data="icon: false">Налоговая и бухгалтерская отчетность</li>
+													<li id="key1.3.4" data="icon: false">Учет банковских счетов</li>
+												   </ul>
+												  </li>
+												 </ul>
+											 </li>
+											</ul>
+										</div>
+
+										<div class="clear"></div>					        	
+									</div>
+									
+									
+								</div>
+								<p class="align_right smaller"><a id="btnSelectAll" href="">Выделить все</a> <a id="btnDeselectAll" class="mleft10" href="">Снять выделение</a> &nbsp;&nbsp;&nbsp;</p>
+							</div>
+							<div class="tab-content-panel"><div class="tabs_content smaller" style="height:350px;"> 2 панель</div></div>
+							<div class="tab-content-panel"><div class="tabs_content smaller" style="height:350px;"> 3 панель</div></div>
+						</div>
+				</div>
+			   
+			   
+			   <br><br><br>
+			   
+			   
+			   
+			   <div class="content_form">
+
+			   		<table class="form_table">
+					    <tr>
+							<th>Сервис:</th><td><select class="select_type2 select_size100p">
+											<option selected="selected">Краснодарский край</option>
+											<option>Краснодарский край</option>
+											<option>Краснодарский край</option>
+										</select></td>
+						</tr>
+						<tr>
+							<th>Регион:</th><td><select class="select_type2 select_size100p">
+											<option selected="selected">Краснодарский край</option>
+											<option>Краснодарский край</option>
+											<option>Краснодарский край</option>
+										</select></td>
+						</tr>
+						<tr>
+							<th>ФИО:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Контактный телефон:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Отзыв:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+						<tr>
+							<th>Комментарий:</th><td><input type="text" class="inputbox input_size100p"></td>
+						</tr>
+					</table>
+
+			        <span class="fright ptop20"><button class="blue_button">Найти</button></span>
+			        <div class="clear"></div>
+			   </div>
+			   
+			   
+			   <br><br><br>
+
+
+			   <div class="text_block">
+				<h2>Список</h2>
+
+					<ul class="ul_class">
+						<li class="sm0"><a href="">Необходимо сверстать ненумерованный список для карты сайта</a></li>
+						<li class="sm1"><a href="">Необходимо сверстать ненумерованный список для карты сайта</a></li>
+						<li class="sm1"><a href="">Необходимо сверстать ненумерованный<br> список для карты сайта</a></li>
+						<li class="sm2"><a href="">Необходимо сверстать ненумерованный список для карты сайта</a></li>
+						<li class="sm3"><a href="">Необходимо сверстать ненумерованный список для карты сайта</a></li>
+						<li class="sm3"><a href="">Необходимо сверстать ненумерованный список для карты сайта</a></li>
+					</ul>
+
+			   </div>
+			   
+			   <br><br>
+			   
+			   <div class="pages">
+			   		<span class="pnumbers">
+			   			<a class="active" href="">1</a> <a href="">2</a> <a href="">3</a> 
+			   			<a class="show_pages">...</a><span style="display:none;"> <a href="">4</a> <a href="">5</a> 
+			   				<a href="">6</a> <a href="">7</a> <a href="">8</a> <a href="">9</a> </span> 
+			   			<a href="">10</a> 
+					</span>
+			   		<span class="next_prev"><a href="">следующая&nbsp;›</a> <a href="">последняя&nbsp;»</a></span>
+			   </div>
+			   
+			   
+			
+			</div>
+						
+			<div class="left_col2">  
+				<hr>
+
+				<div class="text_block">
+					<h3>Часто встречающиеся ситуации</h3>
+					<p><a class="black" href="">Часто встречающиеся ситуации ссылка Часто встречающиеся ситуации ссылка</a></p>
+					<p><a class="black" href="">Часто встречающиеся ситуации ссылка Часто встречающиеся ситуации ссылка</a></p>
+				</div>
+
+				<div class="text_block">
+					<h3>Электронные сервисы</h3>
+					<div>
+					<div id="mini-spoiler">
+							<div class="eservice">
+								<p><a class="maximizator">Услуги для физических лиц</a></p>
+							</div>
+						<div class="ms-content" style="display:none;">
+							<div class="dropdown_eservice">
+							<p><a href="">Адреса и платежные реквизиты Вашей инспекции</a></p>	
+							<p><a href="">Узнать свою задолженность</a></p>
+							<p><a href="">Получение выписки из ЕГРЮЛ/ ЕГРИП через интернет</a></p>	
+							<p><a href="">Заполнить платежное поручение</a></p>	
+							<p class="align_right smaller"><a href="" class="blue">Все сервисы</a></p>
+							</div>
+						</div>
+					</div>
+					
+					<script type="text/javascript">
+						$("#mini-spoiler").MiniSpoiler('maximizator', 'minimizator');
+					</script>
+					</div>
+
+				</div>
+
+
+				<div class="text_block no_border">
+					<h3>Новости по теме &laquo;Я&nbsp;хочу проверить корректно ли проходит проверка&raquo;</h3>
+					<p class="more"><a href="">Все новости по теме</a></p>
+					<p><a class="black" href="">Новости по теме ссылка</a><br><span class="date">01.01.01</span></p>
+					<p><a class="black" href="">Новости по теме ссылка</a><br><span class="date">01.01.01</span></p>
+					<p><a class="black" href="">Новости по теме ссылка</a><br><span class="date">01.01.01</span></p>
+				</div>
+
+				
+			</div>
+
+			<div class="clear"></div>
+			
+			
+			<div class="subscribe" id="subscribe-content-1">
+				<p class="smaller">Оформив подписку, Вы сможете получать новости по теме “Я приобрел недвижимость” на следующий адрес электронной почты:</p>
+				<p><input type="email" class="inputbox"></p>
+				
+				<p><input type="email" class="inputbox input_wrong"></p>
+				<p class="red smaller">Поле заполнено некорректно</p>
+				
+				<div class="ptop20">
+					<div class="fleft smaller"><a href="">Настройка<br>подписки</a></div>
+					<div class="fright"><button class="blue_button">Оформить</button></div>
+					<div class="clear"></div>
+				</div>	
+			</div>
+			
+			
+		</div>
+
+
+		<div class="nav_mobile">
+				<div id="mini-spoiler2">
+					<p><a class="maximizator">Налогообложение в РФ</a></p>
+					<div class="ms-content" style="display:none;">
+							<p><a class="black" href="">Ссылка ссылка</a></p>	
+							<p><a class="black" href="">Ссылка ссылка</a></p>	
+					</div>
+				</div>
+				<div id="mini-spoiler3">
+					<p><a class="maximizator">Смежная деятельность ФНС</a></p>
+					<div class="ms-content" style="display:none;">
+							<p><a class="black" href="">Ссылка ссылка</a></p>	
+							<p><a class="black" href="">Ссылка ссылка</a></p>	
+					</div>
+				</div>
+				<p><a href="">О ФНС России</a></p>
+				<p><a href="">Контакты и обращения</a></p>
+        </div>
+			
+		<script type="text/javascript">
+						$("#mini-spoiler2").MiniSpoiler('maximizator', 'minimizator');
+						$("#mini-spoiler3").MiniSpoiler('maximizator', 'minimizator');
+		</script>
+		
+			
+        
+        <div id="main_menu_footer">
+			<span class="menu_1"><a href="">Физические лица</a></span>
+			<span class="menu_2"><a href="">Индивидуальные предприниматели</a></span>
+			<span class="menu_3 last"><a href="">Юридические лица</a></span>
+			<div class="clear"></div>
+		</div>
+        
+	</div> 
+</div>
+	
+	<div id="footer">
+		<div class="footer_frame">
+			<div class="footer_holder">
+		    
+				<div class="footer_col">
+					<ul class="footer_list">
+						<li><a href="#">Электронные сервисы</a></li>
+						<li><a href="#">Программные средства</a></li>
+						<li><a href="#">Электронный <br>документооборот</a></li>
+						<li><a href="#">Реестры</a></li>
+					</ul>
+					<ul class="footer_list">
+						<li><a href="#">Открытые данные</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer_col">
+					<ul class="footer_list">
+						<li><a href="#">Налоговый кодекс</a></li>
+						<li><a href="#">Форум</a></li>
+					</ul>
+					<ul class="footer_list footer_list_indent">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Вакансии</a></li>
+					</ul>
+					<ul class="footer_list">
+						<li><a href="#">Подшефные детские дома</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer_right">
+					<ul class="info_list_footer">
+						<li>
+							<a href="#" class="link_subscribe">Настройка подписки</a>
+						</li>
+						<li>
+							<a href="#" class="link_updates">RSS-обновления</a>
+						</li>
+						<li>
+							<a href="#" class="link_map">Карта сайта</a>
+						</li>
+					</ul>
+					<div class="copy_div">
+						<div class="copy">&copy; 2005-2013 ФНС России</div>
+						<p>Дата создания страницы  08.07.2013 <br>Дата обновления страницы 08.07. 2013</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+    </form>
+
+
+<script type="text/javascript"> $(".sp").Spoiler({}); </script>	
+<script type="text/javascript">
+	  $("#div-new-tab1").NewTabs();
+	  $("#div-new-tab2").NewTabs();
+	  $(document).ready(function(){
+	  $(".content_form > a.bigger").AdvPanel();
+	  });
+	  
+</script>
+
+</body>
+</html> 
